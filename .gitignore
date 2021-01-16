@@ -1,0 +1,10 @@
+### Global ###
+*.pyc
+*.sqlite3
+
+### PyCharm ###
+/venv
+/.idea
+/static
+/media
+__pycache__
