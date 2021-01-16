@@ -10,6 +10,9 @@ django = "*"
 psycopg2 = "*"
 gunicorn = "*"
 django-heroku = "*"
+drf-spectacular = "*"
+djangorestframework = "*"
+pillow = "*"
 
 [requires]
 python_version = "3.8"
