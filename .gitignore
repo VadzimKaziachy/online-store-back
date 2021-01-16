@@ -2,6 +2,7 @@
 *.pyc
 *.sqlite3
 
+
 ### PyCharm ###
 /venv
 /.idea
