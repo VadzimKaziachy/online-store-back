@@ -13,7 +13,7 @@ from django_filters.rest_framework import (
 )
 
 from products.models import (
-    Product,
+    ProductModel,
 )
 from products.filters import (
     ProductFilter
@@ -24,7 +24,7 @@ from products.serializers import (
 
 
 @extend_schema(
-    summary='Call for read list product',
+    summary='Call for a list of products',
     parameters=[
         OpenApiParameter(name='category', required=False, type=int),
     ],
@@ -33,7 +33,7 @@ from products.serializers import (
     }
 )
 class ProductsView(ListAPIView):
-    queryset = Product.objects.all()
+    queryset = ProductModel.objects.all()
     serializer_class = ProductSerializer
     filter_backends = (DjangoFilterBackend,)
     filter_class = ProductFilter

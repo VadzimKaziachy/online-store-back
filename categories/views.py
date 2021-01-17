@@ -4,7 +4,7 @@ from rest_framework.generics import ListAPIView
 from drf_spectacular.utils import extend_schema
 
 from categories.models import (
-    Category,
+    CategoryModel,
 )
 from categories.serializers import (
     CategorySerializer,
@@ -12,11 +12,11 @@ from categories.serializers import (
 
 
 @extend_schema(
-    summary='Call for read list category',
+    summary='Call to get a list of categories',
     responses={
         status.HTTP_200_OK: CategorySerializer
     }
 )
 class CategoriesView(ListAPIView):
-    queryset = Category.objects.all()
+    queryset = CategoryModel.objects.all()
     serializer_class = CategorySerializer

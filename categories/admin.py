@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 from categories.models import (
-    Category
+    CategoryModel
 )
 
 
@@ -9,4 +9,4 @@ class CategoryAdmin(admin.ModelAdmin):
     list_display = ('name',)
 
 
-admin.site.register(Category, CategoryAdmin)
+admin.site.register(CategoryModel, CategoryAdmin)

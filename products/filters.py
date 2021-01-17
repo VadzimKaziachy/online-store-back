@@ -3,13 +3,13 @@ from django_filters import (
 )
 
 from products.models import (
-    Product,
+    ProductModel,
 )
 
 
 class ProductFilter(FilterSet):
     class Meta:
-        model = Product
+        model = ProductModel
         fields = (
             'category',
         )

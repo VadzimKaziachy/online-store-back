@@ -2,12 +2,12 @@ from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
 
 
-class Product(models.Model):
+class ProductModel(models.Model):
     image = models.ImageField()
     description = models.TextField()
     name = models.CharField(max_length=1000)
     price = models.FloatField(validators=[MinValueValidator(0)])
-    category = models.ForeignKey('categories.Category', on_delete=models.CASCADE)
+    category = models.ForeignKey('categories.CategoryModel', on_delete=models.CASCADE)
     assessment = models.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(5)])
 
     def __str__(self):
